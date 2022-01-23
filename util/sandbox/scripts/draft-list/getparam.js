@@ -1,6 +1,6 @@
 const PageSetting = {};
 PageSetting.getParent = true;
-PageSetting.currentParam = decodeURIExtension(document.referrer);
+PageSetting.currentParam = document.referrer;
 
 console.log(PageSetting);
 
