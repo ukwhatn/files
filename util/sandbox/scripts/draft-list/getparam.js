@@ -1,10 +1,7 @@
 const PageSetting = {};
+console.log(document.referrer);
 PageSetting.getParent = true;
-PageSetting.currentParam = decodeURIExtension(document.referrer);
-console.log(PageSetting);
-if (!PageSetting.currentParam) {
-    PageSetting.currentParam = "http://scp-jp-sandbox3.wikidot.com/draft-list";
-}
+PageSetting.currentParam = "http://scp-jp-sandbox3.wikidot.com/draft-list";
 PageSetting.myPage = (function () {
     let tmpURL = PageSetting.currentParam.split("http://").join("").split("/");
     return "http://" + tmpURL[0] + "/" + tmpURL[1];
