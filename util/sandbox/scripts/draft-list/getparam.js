@@ -4,11 +4,8 @@ PageSetting.currentParam = decodeURIExtension(document.referrer);
 if (!PageSetting.currentParam) {
     PageSetting.currentParam = "http://scp-jp-sandbox3.wikidot.com/draft-list";
 }
-
-console.log(PageSetting);
-
 PageSetting.myPage = (function () {
-    let tmpURL = PageSetting.currentParam.split("http://").join("").split("/");
+    var tmpURL = PageSetting.currentParam.split("http://").join("").split("/");
     return "http://" + tmpURL[0] + "/" + tmpURL[1];
 })();
 PageSetting.currentParam = PageSetting.currentParam.split(PageSetting.myPage).join("");
