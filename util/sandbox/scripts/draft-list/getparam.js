@@ -1,6 +1,9 @@
 const PageSetting = {};
 PageSetting.getParent = true;
 PageSetting.currentParam = decodeURIExtension(document.referrer);
+if (!PageSetting.currentParam) {
+    PageSetting.currentParam = "http://scp-jp-sandbox3.wikidot.com/draft-list";
+}
 
 console.log(PageSetting);
 
